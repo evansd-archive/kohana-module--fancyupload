@@ -25,14 +25,6 @@
  *
 **/
 
-# Element.Events
-# Element.Dimensions
-# Fx.Tween
-# Fx.Transitions
-# Selectors
-# JSON
-# Swiff
-
 PHP_SAPI === 'cli' or die('Please run from the command line');
 
 $javascript_files = array
@@ -57,12 +49,13 @@ foreach($javascript_files as $file => $dependencies)
 	
 	$script = file_get_contents($remote_url.$file.'.js?raw=true');
 	
+	// Replace path to SWF file with PHP to generate appropriate path using url::site()
 	$script = str_replace("path: 'Swiff.Uploader.swf',", 'path: \'<?php echo url::site("assets/fancyupload/Swiff.Uploader.swf");?>\',', $script);
 	
 	$header = '';
 	foreach($dependencies as $dependency)
 	{
-		$header .= "//= requires $dependency\n"; 
+		$header .= "//= require $dependency\n"; 
 	}
 	$script = $header."\n".$script;
 	
