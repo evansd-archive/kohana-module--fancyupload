@@ -1,5 +1,5 @@
-//= requires <mootools/Element.Event>
-//= requires <mootools/Class.Extras>
+//= require <mootools/Element.Event>
+//= require <mootools/Class.Extras>
 
 /**
  * Uploader

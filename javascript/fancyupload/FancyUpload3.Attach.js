@@ -1,4 +1,4 @@
-//= requires "Swiff.Uploader"
+//= require "Swiff.Uploader"
 
 /**
  * FancyUpload.Attach - Flash meets Ajax for powerful and elegant uploads.

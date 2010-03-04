@@ -1,4 +1,4 @@
-//= requires <mootools/Fx.Transitions>
+//= require <mootools/Fx.Transitions>
 
 /**
  * Fx.ProgressBar

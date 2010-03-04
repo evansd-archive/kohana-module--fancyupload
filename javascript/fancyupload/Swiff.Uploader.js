@@ -1,5 +1,5 @@
-//= requires <mootools/Swiff>
-//= requires <mootools/Class.Extras>
+//= require <mootools/Swiff>
+//= require <mootools/Class.Extras>
 
 /**
  * Swiff.Uploader - Flash FileReference Control
